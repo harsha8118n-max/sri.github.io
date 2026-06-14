@@ -1,4 +1,4 @@
-	:root {
+:root {
   color-scheme: light;
   --primary: #0f172a;
   --secondary: #2563eb;
@@ -79,7 +79,7 @@ textarea {
   background: var(--primary);
   color: #fff;
   padding: 10px 14px;
-  border-radius: var(--radius);
+  border-radius: 50%;
   transition: top 0.2s ease;
 }
 
@@ -115,6 +115,10 @@ textarea {
   gap: 24px;
 }
 
+.nav-shell-minimal {
+  justify-content: flex-end;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -124,13 +128,14 @@ textarea {
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius);
-  color: #fff;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  width: 44px;
+  height: 44px;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 28%;
+  border: 2px solid rgba(59, 130, 246, 0.58);
+  background: var(--surface-strong);
   box-shadow: var(--shadow-soft);
 }
 
@@ -274,6 +279,46 @@ p {
   max-width: 680px;
   margin: 24px 0 0;
   font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+}
+
+.profile-chip {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+  padding: 9px 14px 9px 9px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+}
+
+.profile-chip img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 28%;
+  border: 2px solid rgba(59, 130, 246, 0.42);
+  background: var(--surface-strong);
+}
+
+.profile-chip div {
+  display: grid;
+  gap: 3px;
+}
+
+.profile-chip strong {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.profile-chip span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .hero-actions {
