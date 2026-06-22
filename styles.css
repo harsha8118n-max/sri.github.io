@@ -115,16 +115,40 @@ textarea {
   gap: 24px;
 }
 
-.nav-shell-minimal {
-  justify-content: flex-end;
-}
-
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.brand-stack {
+  display: inline-grid;
+  align-content: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand-name {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.brand-title {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.brand-stack:hover .brand-name {
+  color: var(--accent);
+  transform: translateX(2px);
 }
 
 .brand-mark {
@@ -248,7 +272,7 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(3.24rem, 5.4vw, 4.54rem);
+  font-size: clamp(3.08rem, 5.13vw, 4.31rem);
   line-height: 1.04;
   max-width: 700px;
 }
@@ -279,47 +303,6 @@ p {
   max-width: 680px;
   margin: 24px 0 0;
   font-size: clamp(1.02rem, 1.5vw, 1.18rem);
-}
-
-.profile-chip {
-    width: fit-content;
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 24px;
-    padding: 12px 18px 12px 12px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
-}
-
-.profile-chip img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 15%;
-    border: 2px solid rgba(59, 130, 246, 0.6);
-    background: var(--surface-strong);
-    box-shadow: 0 0 18px rgba(59, 130, 246, 0.25);
-}
-
-.profile-chip div {
-  display: grid;
-  gap: 3px;
-}
-
-.profile-chip strong {
-  color: var(--text);
-  font-weight: 900;
-}
-
-.profile-chip span {
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 700;
 }
 
 .hero-actions {
@@ -1382,6 +1365,19 @@ p {
     display: none;
   }
 
+  .brand-stack {
+    max-width: calc(100vw - 92px);
+  }
+
+  .brand-name {
+    font-size: 0.92rem;
+  }
+
+  .brand-title {
+    font-size: 0.66rem;
+    white-space: normal;
+  }
+
   .section {
     padding: 68px 0;
   }
@@ -1391,7 +1387,7 @@ p {
   }
 
   h1 {
-    font-size: clamp(2.64rem, 12vw, 3.66rem);
+    font-size: clamp(2.51rem, 11.4vw, 3.48rem);
   }
 
   h2 {
